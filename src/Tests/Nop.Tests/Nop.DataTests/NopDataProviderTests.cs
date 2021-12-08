@@ -335,7 +335,7 @@ namespace Nop.Tests.Nop.DataTests
             {
                 case DataProviderType.Unknown:
                     connStr.Should()
-                        .Be(@"Data Source=D:\git\nopCommerce\src\Presentation\Nop.Web\App_Data\test_db.sqlite;Mode=ReadWrite;Cache=Shared;Password=passwd");
+                        .Be(@$"Data Source={CommonHelper.DefaultFileProvider.MapPath($"~/App_Data/")}test_db.sqlite;Mode=ReadWrite;Cache=Shared;Password=passwd");
                     break;
                 case DataProviderType.SqlServer:
                     connStr.Should()
